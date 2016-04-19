@@ -51,6 +51,9 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'faker'
 gem 'kaminari'
 gem 'bcrypt'
+gem 'quiet_assets'
+
+gem "rails-erd"
 group :production do
   gem 'puma'
   gem 'rails_12factor'
