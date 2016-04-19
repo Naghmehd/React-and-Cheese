@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :cheeses
-  has_secure_password 
+  has_many :cheeses, :through => :likes
+  has_many :likes
+  has_secure_password
 end

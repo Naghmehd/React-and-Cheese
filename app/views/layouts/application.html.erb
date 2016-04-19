@@ -7,24 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class='navbar navbar-default navbar-fixed-top'>
-    <div class="container-fluid">
-        <div class="navbar-header links">
-          <%= link_to 'Home', user_path(current_user)%>
-        </div>
 
-          <ul class="nav navbar-nav navbar pull-right">
-            <% if signed_in? %>
-              <li> <%= link_to "All Cheeses", cheeses_path, class: "btn btn-default" %> </li>
-              <li> <%= link_to "Add Cheese", new_cheese_path, class: "btn btn-default" %> </li>
-              <li> <%= link_to "Sign Out", sign_out_path, method: :DELETE, class: "btn btn-danger" %> </li>
-            <% else %>
-              <li> <%= link_to "Sign In", sign_in_path, class: "btn btn-default navbar-btn" %> </li>
-              <li> <%= link_to "New User", new_user_path, class: "btn btn-default navbar-btn" %> </li>
-            <% end %>
-          </ul>
-      </div>
-  </nav>
+  <% if signed_in? %>
+    <%= react_component("NavBar") %>
+  <% else %>
+    <%= react_component("LoggedOutNavBar") %>
+  <% end %>
 
 <%= yield %>
 

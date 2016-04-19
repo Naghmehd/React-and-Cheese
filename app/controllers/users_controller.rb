@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @tweets = @user.tweets
+    @cheeses = @user.cheeses
   end
 
   # GET /users/new

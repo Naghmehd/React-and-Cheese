@@ -1,0 +1,23 @@
+</br>
+</br>
+</br>
+</br>
+
+<p>
+ <strong>Username:</strong>
+ <%= @user.username %>
+</p>
+<p>
+ <strong>Password:</strong>
+ <%=@user.password_digest %>
+</p>
+<<p>
+ <strong>Favorite Cheeses:</strong>
+ <% @cheeses.each do |cheese| %>
+     <p><%= cheese.name %></p>
+     <p><%= link_to 'Show', cheese %></p>
+ <% end %>
+</p>
+
+
+<%= link_to 'Back', users_path %>
