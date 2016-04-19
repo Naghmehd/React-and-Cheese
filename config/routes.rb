@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/sign_out', to: 'sessions#sign_out', as: 'sign_out'
   delete '/sign_out', to: 'sessions#destroy'
 
-  root 'user/index'
+  root 'users#index'
 
 
   resources :cheeses
