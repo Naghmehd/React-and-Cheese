@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  get 'sessions/new'
+  get '/sign_in', to: 'sessions#sign_in', as: 'sign_in'
+  post '/sign_in', to: 'sessions#create'
+  get '/sign_out', to: 'sessions#sign_out', as: 'sign_out'
+  delete '/sign_out', to: 'sessions#destroy'
+
+  root 'user/index'
+
+
+  resources :cheeses
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
