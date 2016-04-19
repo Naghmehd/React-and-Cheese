@@ -4,7 +4,7 @@ class CheesesController < ApplicationController
   # GET /cheeses
   # GET /cheeses.json
   def index
-    @cheeses = cheese.all.order(created_at: :desc)
+    @cheeses = Cheese.all
     respond_to do |format|
       format.html
       format.json do
@@ -30,7 +30,7 @@ class CheesesController < ApplicationController
 
   # GET /cheeses/new
   def new
-    @cheese = cheese.new
+    @cheese = Cheese.new
   end
 
   # GET /cheeses/1/edit
@@ -81,12 +81,11 @@ class CheesesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cheese
-      @cheese = cheese.find(params[:id])
+      @cheese = Cheese.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chees_params
       params.require(:cheese).permit(:message)
     end
-end
 end
