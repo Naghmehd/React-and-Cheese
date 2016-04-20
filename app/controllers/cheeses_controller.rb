@@ -34,7 +34,7 @@ class CheesesController < ApplicationController
   end
 
   def cheese_params
-   params.require(:cheese).permit(:name)
+    params.require(:cheese).permit(:name)
   end
 
 end

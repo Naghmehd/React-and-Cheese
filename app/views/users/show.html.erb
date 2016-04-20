@@ -7,11 +7,8 @@
  <strong>Username:</strong>
  <%= @user.username %>
 </p>
+
 <p>
- <strong>Password:</strong>
- <%=@user.password_digest %>
-</p>
-<<p>
  <strong>Favorite Cheeses:</strong>
  <% @cheeses.each do |cheese| %>
      <p><%= cheese.name %></p>

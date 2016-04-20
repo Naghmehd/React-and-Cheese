@@ -7,8 +7,9 @@ var NavBar = React.createClass({
               <a href="/">Home</a>
             </div>
             <ul className="nav navbar-nav navbar pull-right">
-                <li> <a className="btn btn-default" href="/cheeses">All Cheeses</a> </li>
+                <li> <a className="btn btn-default" href="/users">All Users</a> </li>
                 <li> <a className="btn btn-default" href="/cheeses/new">Add Cheese</a> </li>
+                <li> <a className="btn btn-default" href="/likes">Like Your Cheeses</a> </li>
                 <li> <a className="btn btn-danger" rel="nofollow" data-method="DELETE" href="/sign_out">Sign Out</a> </li>
             </ul>
           </div>

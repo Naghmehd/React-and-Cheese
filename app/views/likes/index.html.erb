@@ -1,0 +1,4 @@
+<%= simple_form_for current_user do |f| %>
+  <%= f.association :cheeses, as: :check_boxes,collection: Cheese.all %>
+  <%= f.submit 'Save Favorite Cheeses' %>
+<% end %>

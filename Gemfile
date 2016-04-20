@@ -56,6 +56,8 @@ gem 'bcrypt'
 gem 'quiet_assets'
 gem 'react-bootstrap-rails'
 
+gem 'simple_form'
+
 gem "rails-erd"
 group :production do
   gem 'puma'
