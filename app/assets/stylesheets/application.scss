@@ -17,5 +17,30 @@
  @import 'bootstrap';
 
 body {
-  padding-top: 60px;
+  @include gradient-vertical(#F8EBB7, #fff, 0%, 100%);
+  padding-top: 90px;
+  color: #444;
+}
+
+.navbar.navbar-default {
+    border-bottom-color: #85726B;
+}
+
+.navbar-header.links {
+
+}
+a:hover, a:focus {
+    color: #929292;
+    text-decoration: none;
+}
+
+a {
+  color: #412C0D;
+}
+
+input {
+  margin: 10px 0 ;
+}
+.btn.btn-default.navbar-btn {
+  margin-left: 25px;
 }

@@ -3,18 +3,25 @@
 </br>
 </br>
 
-<p>
- <strong>Username:</strong>
- <%= @user.username %>
-</p>
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th> <%= @user.username %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
 
-<p>
- <strong>Favorite Cheeses:</strong>
- <% @cheeses.each do |cheese| %>
-     <p><%= cheese.name %></p>
-     <p><%= link_to 'Show', cheese %></p>
- <% end %>
-</p>
+  <tbody>
+    <% @cheeses.each do |cheese| %>
+      <tr>
+        <td><%= cheese.name %></td>
+
+        <td> <%= link_to 'Show', cheese %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
 
 
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path, class: "btn btn-default" %>
