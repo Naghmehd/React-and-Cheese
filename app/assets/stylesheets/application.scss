@@ -26,8 +26,13 @@ body {
     border-bottom-color: #85726B;
 }
 
-.navbar-header.links {
+div.navbar-header.links {
+  font-size: 2em;
+  margin-top: 10px;
+}
 
+li {
+  margin-left: 4px;
 }
 a:hover, a:focus {
     color: #929292;
@@ -43,4 +48,8 @@ input {
 }
 .btn.btn-default.navbar-btn {
   margin-left: 25px;
+}
+
+label.check_boxes.optional {
+  font-size: 2em;
 }
