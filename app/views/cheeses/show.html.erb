@@ -3,12 +3,15 @@
 </br>
 </br>
 
+
 <p>
  <strong>Name:</strong>
  <%= @cheese.name %>
+ <ol>
+ <% @cheese.users.each do |user| %>
+   <p><%= user.username %></p>
+ <% end %>
+ </ol>
 </p>
-
-
-
 
 <%= link_to 'Back', cheeses_path, class: "btn btn-default"%>

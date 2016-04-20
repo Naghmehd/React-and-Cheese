@@ -18,3 +18,11 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+
+
+$(function(){
+    var url = window.location.href.split('/');
+    url = url[url.length-1];
+
+    $("#nav a[href='" + url + "'").addClass("active");
+});

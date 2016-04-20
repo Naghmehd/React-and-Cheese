@@ -1,7 +1,11 @@
+
+
+
+
 var NavBar = React.createClass({
   render: function() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-default navbar-fixed-top" id="nav">
         <div className="container-fluid">
             <div className="navbar-header links">
               <a href="/">Home</a>
